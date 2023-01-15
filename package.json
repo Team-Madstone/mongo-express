@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "mongodb, express 스터디용 레포입니다.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --watch \"*.ts\" --exec \"ts-node\" src/index.ts",
+    "start": "npm run build && node dist/index.js",
+    "build": "rm -rf dist/ && tsc"
   },
   "repository": {
     "type": "git",
